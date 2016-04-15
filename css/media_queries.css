@@ -1,0 +1,11 @@
+/* Правка для экранов меньше 640px*/
+@media screen and (max-width: 980px) {
+  .banner{background:none;width: 100%;}
+  .imenu{margin-left:80%}
+  .imenu_item{width:50%;color:#000}
+}
+
+/* Правка для экранов меньше 640px*/
+/*@media screen and (max-width: 640px) {
+  .main_table_column{width:95%}
+}*/

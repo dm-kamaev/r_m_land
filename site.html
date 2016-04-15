@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Risk-Monitoring | Landing page</title>
+  <!-- <link href="/r_m_land/metro_ui-web/css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
+  <!-- <link href="/r_m_land/mixdesigns/themes/mix/HTML/middle-mobile-layout/light/gray-bg/css/style_1.css" rel="stylesheet" type="text/css" media="all" /> -->
+  <!-- <link href="/r_m_land/it/assets/css/style_it.css" rel="stylesheet" type="text/css" media="all" /> -->
+  <!-- <link href="/r_m_land/metro_ui-web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
+  <link href="/r_m_land/css/style_ui_web.css"   rel="stylesheet" type="text/css" media="all" />
+  <link href="/r_m_land/css/style_mixdesig.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/r_m_land/css/style_it.css"       rel="stylesheet" type="text/css" media="all" />
+  <link href="/r_m_land/css/bootstrap.css"      rel="stylesheet" type="text/css" media="all" />
+  <link href="/r_m_land/css/my_style.css"       rel="stylesheet" type="text/css" media="all" />
+  <link href="/r_m_land/css/media_queries.css"  rel="stylesheet" type="text/css" media="all" />
+
+  <!--fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <!--//fonts-->
+
+  <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+  <!-- <script type="text/javascript" src="/r_m_land/metro_ui-web/js/jquery.min.js"></script> -->
+  <!-- <script src="/r_m_land/client/slider.js"></script> -->
+  <style>
+      @font-face {
+        font-family: 'HelveticaNeue-Light';
+        src: url('stat/HelveticaNeue-Light/HelveticaNeue-Light.eot');
+        src: url('stat/HelveticaNeue-Light/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'),
+             url('stat/HelveticaNeue-Light/HelveticaNeue-Light.woff') format('woff'),
+             url('stat/HelveticaNeue-Light/HelveticaNeue-Light.ttf') format('truetype'),
+             url('stat/HelveticaNeue-Light/HelveticaNeue-Light.svg#HelveticaNeue-Light') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    .slider {
+      margin:0 auto;
+      width: 400px; height: 300px;
+      overflow: hidden;
+    }
+      .slider > ul {
+        /* styled by JS to match the added width and height of all <li>’s */
+        position: relative;
+        -webkit-transition: 0.5s left;
+        -moz-transition: 0.5s left;
+        -ms-transition: 0.5s left;
+        -o-transition: 0.5s left;
+
+        list-style: none;
+        margin: 0; padding: 0;
+      }
+        .slider > ul > li {
+          float: left;
+          width: 400px; height: 300px;
+        }
+  </style>
+</head>
+<body>
+
+  ${header.html}
+
+  <!-- about-us -->
+  <div id="company" class="about-us">
+    <div class="container">
+      <div class="about-info">
+        <h2>ABOUT US</h2>
+        <p style=font-weight:600>Компания “Risk-monitoring” разрабатывает индивидуальные решения по автоматизации рабочих процессов.</p>
+      </div>
+      <div class="about-grids">
+        <div class="col-md-6 about-left">
+          <img src="images/1.png" alt=" "/>
+        </div>
+        <div class="col-md-6 about-right">
+          <h2>Lorem ipsum dolor sit amet adipisicing elit.</h2>
+          <div class="border"></div>
+          <p style=font-size:120%;line-height:1.5;color:#000>
+            Множество компаний несет непомерно большие расходы из-за отсутствия автоматизации. У одних управленческая отчетность – это в основном множество excel-таблиц, составленных вручную, у других - анкеты клиентов представляют собой стопки бумаги, занимающие все свободное место в офисе.
+            <span class="para">
+              Во многих компаниях сотрудники тратят значительную часть рабочего времени просто на сбор нужной информации в интернете. Можно ли высоко взлететь с таким грузом? Нет. Ведь у такой компании более высокие не только расходы, но и операционные риски.
+            </span>
+          </p>
+          <div class="getstart"><a href="#">Начнем</a></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!-- about-us -->
+
+
+  ${services.html}
+
+  ${advantages.html}
+
+
+<!-- technologies -->
+  <section id=technologies class=mysection>
+    <div class="container">
+      <div style=margin-bottom:20px; class="col-md-12 titleSection">
+          <h2>Наши технологии</h2>
+          <div class="coloredLine"></div>
+      </div>
+      <p style="margin:20px auto;font-size:180%;line-height:1.5;text-align:center;font-family:'HelveticaNeue-Light';">
+        Мы используем современные и стабильные инструменты для решения ваших задач
+      </p>
+      <img src="img/logo_nodejs.jpg" class="photo" alt="Node js">
+      <img src="img/logo_perl.png"   class="photo" alt="Perl">
+      <img src="img/logo_mysql.jpg"  class="photo" alt="MySQL">
+      <img src="img/logo_apache.jpg" class="photo" alt="Apache">
+      <img src="img/logo_nginx.jpg"  class="photo" alt="Nginx">
+      <img src="img/logo_js.jpg" style=border-radius:20px alt="JavaScript">
+      <img src="img/logo_htmlCss.jpg" class="photo" alt="HTML5 CSS">
+    </div>
+  </section>
+<!-- technologies -->
+
+
+  ${team.html}
+
+  ${contact_us.html}
+
+  <!-- <script src="client/lib.js"></script> -->
+  <!-- <script src="client/slider.js"></script> -->
+  <script>
+    ${lib.js}
+    ${slider.js}
+    ${click_on_item_menu.js}
+    ${form_feedback.js}
+    ${app.js}
+    // ${jquery.js}
+  </script>
+  <script>
+
+  </script>
+</body>
+</html>

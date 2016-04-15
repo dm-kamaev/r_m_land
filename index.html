@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Risk-Monitoring | Landing page</title>
+  <!-- <link href="/r_m_land/metro_ui-web/css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
+  <!-- <link href="/r_m_land/mixdesigns/themes/mix/HTML/middle-mobile-layout/light/gray-bg/css/style_1.css" rel="stylesheet" type="text/css" media="all" /> -->
+  <!-- <link href="/r_m_land/it/assets/css/style_it.css" rel="stylesheet" type="text/css" media="all" /> -->
+  <!-- <link href="/r_m_land/metro_ui-web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
+  <link href="/r_m_land/css/style_ui_web.css"   rel="stylesheet" type="text/css" media="all" />
+  <link href="/r_m_land/css/style_mixdesig.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/r_m_land/css/style_it.css"       rel="stylesheet" type="text/css" media="all" />
+  <link href="/r_m_land/css/bootstrap.css"      rel="stylesheet" type="text/css" media="all" />
+  <link href="/r_m_land/css/my_style.css"       rel="stylesheet" type="text/css" media="all" />
+  <link href="/r_m_land/css/media_queries.css"  rel="stylesheet" type="text/css" media="all" />
+
+  <!--fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <!--//fonts-->
+
+  <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+  <!-- <script type="text/javascript" src="/r_m_land/metro_ui-web/js/jquery.min.js"></script> -->
+  <!-- <script src="/r_m_land/client/slider.js"></script> -->
+  <style>
+      @font-face {
+        font-family: 'HelveticaNeue-Light';
+        src: url('stat/HelveticaNeue-Light/HelveticaNeue-Light.eot');
+        src: url('stat/HelveticaNeue-Light/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'),
+             url('stat/HelveticaNeue-Light/HelveticaNeue-Light.woff') format('woff'),
+             url('stat/HelveticaNeue-Light/HelveticaNeue-Light.ttf') format('truetype'),
+             url('stat/HelveticaNeue-Light/HelveticaNeue-Light.svg#HelveticaNeue-Light') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    .slider {
+      margin:0 auto;
+      width: 400px; height: 300px;
+      overflow: hidden;
+    }
+      .slider > ul {
+        /* styled by JS to match the added width and height of all <li>’s */
+        position: relative;
+        -webkit-transition: 0.5s left;
+        -moz-transition: 0.5s left;
+        -ms-transition: 0.5s left;
+        -o-transition: 0.5s left;
+
+        list-style: none;
+        margin: 0; padding: 0;
+      }
+        .slider > ul > li {
+          float: left;
+          width: 400px; height: 300px;
+        }
+  </style>
+</head>
+<body>
+
+  <!-- banner -->
+<div class="banner">
+  <div>
+    <div>
+      <div style="border:1px solid red;display:inline-block;width:100%;vertical-align:top;">
+        <span class="menu"><img src="images/icon.png" alt="" /></span>
+        <div class=imenu>
+          <a id=imenu_item_1 class="scroll imenu_item" href="#company">О КОМПАНИИ</a>
+          <a id=imenu_item_2 class="scroll imenu_item" href="#we_do">МЫ ДЕЛАЕМ</a>
+          <a id=imenu_item_3 class="scroll imenu_item" href="#advantages">ПРЕИМУЩЕСТВА</a>
+          <a id=imenu_item_4 class="scroll imenu_item" href="#technologies">ТЕХНОЛОГИИ</a>
+          <a id=imenu_item_5 class="scroll imenu_item" href="#contact-us">КОНТАКТЫ</a>
+        </div>
+        <div style="border:1px solid red;display:inline-block;width:100%;vertical-align:top;">
+          <a href="http://risk-monitoring.ru" class=logo_diamond_wrap>';
+            <div class=logo_diamond>';
+              <p class=logo_letters>R&#8198;-&#8198;M</p>';
+            </div>';
+          </a>
+        </div>
+        <!-- script for menu -->
+        <script>
+          // $( "span.menu" ).click(function() {
+          //   $( "ul.nav1" ).slideToggle(300, function() {
+          //    // Animation complete.
+          //   });
+          // });
+        </script>
+        <!-- //script for menu -->
+      <div class="clearfix"></div>
+    </div>
+    </div>
+<!--     <div class="banner-info">
+      <h1>THE ULTIMATE COLLECTION OF FREE PSD TEMPLATES!!</h1>
+      <div class="download"><a href="#">DOWNLOAD</a></div>
+    </div> -->
+  </div>
+</div>
+
+  <!-- about-us -->
+  <div id="company" class="about-us">
+    <div class="container">
+      <div class="about-info">
+        <h2>ABOUT US</h2>
+        <p style=font-weight:600>Компания “Risk-monitoring” разрабатывает индивидуальные решения по автоматизации рабочих процессов.</p>
+      </div>
+      <div class="about-grids">
+        <div class="col-md-6 about-left">
+          <img src="images/1.png" alt=" "/>
+        </div>
+        <div class="col-md-6 about-right">
+          <h2>Lorem ipsum dolor sit amet adipisicing elit.</h2>
+          <div class="border"></div>
+          <p style=font-size:120%;line-height:1.5;color:#000>
+            Множество компаний несет непомерно большие расходы из-за отсутствия автоматизации. У одних управленческая отчетность – это в основном множество excel-таблиц, составленных вручную, у других - анкеты клиентов представляют собой стопки бумаги, занимающие все свободное место в офисе.
+            <span class="para">
+              Во многих компаниях сотрудники тратят значительную часть рабочего времени просто на сбор нужной информации в интернете. Можно ли высоко взлететь с таким грузом? Нет. Ведь у такой компании более высокие не только расходы, но и операционные риски.
+            </span>
+          </p>
+          <div class="getstart"><a href="#">Начнем</a></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!-- about-us -->
+
+
+    <!-- services -->
+  <section id="services">
+    <div id=we_do class="container">
+        <div class="row">
+            <div class="col-md-12 titleSection">
+                <h2>Мы уже делаем для наших клиентов</h2>
+                <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry!</p> -->
+                <div class="coloredLine"></div>
+            </div><!-- col-md-12 end -->
+        </div><!-- row end -->
+    </div>
+    <div class="space80"></div>
+
+    <div id=servicesContent class="servicesContent" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <!--the 4 servicesList -->
+            <ul class="servicesList">
+              <li id=services_1 class="col-md-3 col-sm-6 white_blue">
+                <span class="number">1</span>
+                <h3 id=services_1_title>Системы электронного документооборота</h3>
+              </li>
+              <li id=services_2 class="col-md-3 col-sm-6 pink">
+                <span class="number">2</span>
+                <h3 id=services_2_title>Cистемы по сбору и обработке статистической информации</h3>
+              </li>
+              <li id=services_3 class="col-md-3 col-sm-6 blue">
+                <span class="number">3</span>
+                <h3 id=services_3_title>Программный комплекс по анализу финансового положения клиентов банка</h3>
+              </li>
+              <li id=services_4 class="col-md-3 col-sm-6 orange">
+                <span class="number">4</span>
+                <h3 id=services_4_title>Автоматизированные системы управления затрат компании</h3>
+              </li>
+            </ul>
+          </div>
+        </div><!-- row end -->
+
+        <div class="row">
+          <div class="col-md-12">
+            <!--the 4 servicesList -->
+            <ul class="servicesList">
+              <li id=services_5 class="col-md-3 col-sm-6 green">
+                <span class="number">5</span>
+                <h3 id=services_5_title>Системы дистанционного обслуживания и поддержки клиентов</h3>
+              </li>
+              <li id=services_6 class="col-md-3 col-sm-6 purple">
+                <span class="number">6</span>
+                <h3 id=services_6_title>Системы Интранет</h3>
+              </li>
+              <li id=services_7 class="col-md-3 col-sm-6 yellow">
+                <span class="number">7</span>
+                <h3 id=services_7_title>Автоматизированные системы кредитного скоринга</h3>
+              </li>
+              <li id=services_8 class="col-md-3 col-sm-6 white_red">
+                <span class="number">8</span>
+                <h3 id=services_8_title>Системы автоматизированного составления авансовых отчетов</h3>
+              </li>
+            </ul>
+          </div>
+        </div><!-- row end -->
+
+      </div><!-- container end -->
+    </div><!-- servicesContent end -->
+  </section><!-- #services end -->
+
+  
+<div id=advantages style=margin-top:100px>
+  <div class=advantages_item>
+    <div class=advantages_left>
+      <img style=width:70%;border-radius:50px; src="/r_m_land/img/red theme/High technology2.png">
+    </div>
+    <div class=advantages_right>
+      <h3 class=advantages_title>Передовые технологии</h3>
+      <div class="coloredLine"></div>
+      <p class=advantages_text>Наши технологические решения     основаны на web-программировании, что обеспечивает удобный доступ (достаточно всего лишь открыть браузер) и приятный, дружественный интерфейс. При этом вы можете заказать:
+      </p>
+      <div class=advantages_list_left>
+        <p class=advantages_list_left_number>1.</p>
+      </div>
+      <div class=advantages_list_right>
+        офлайн-приложение для ограниченного круга пользователей;
+      </div>
+      <div class=advantages_list_left>
+        <p class=advantages_list_left_number>2.</p>
+      </div>
+      <div class=advantages_list_right>
+        приложение с доступом в интернет, собирающее и обрабатывающее важную для вас информацию, позволяющее взаимодействовать с клиентами и контрагентами.
+      </div>
+    </div>
+  </div>
+</div>
+<div style=margin-top:100px>
+  <div class=advantages_item>
+    <div class=advantages_left>
+      <img style=width:70%;border-radius:50px; src="/r_m_land/img/red theme/IT developers.png">
+    </div>
+    <div class=advantages_right>
+      <h3 class=advantages_title>Профессиональная команда разработчиков</h3>
+      <div class="coloredLine"></div>
+      <p class=advantages_text>
+       Наши программисты обладают большим опытом работы с высоконагруженными системами, большими базами данных и сложными алгоритмами, являются специалистами высокого класса по разработке клиентской и серверной части web-ресурсов.
+      </p>
+    </div>
+  </div>
+</div>
+<div style=margin-top:100px>
+  <div class=advantages_item>
+    <div class=advantages_left>
+      <img style=width:70%;border-radius:50px; src="/r_m_land/img/red theme/experts.png">
+    </div>
+    <div class=advantages_right>
+      <h3 class=advantages_title>Наличие профильных экспертов</h3>
+      <div class="coloredLine"></div>
+      <p class=advantages_text>
+       В нашей команде есть эксперты по управленческому учету и контролю затрат на предприятии,  бухгалтерскому учету и отчетности, банковской деятельности,  финансовому анализу и др.
+      </p>
+    </div>
+  </div>
+</div>
+<div style=margin-top:100px>
+  <div class=advantages_item>
+    <div class=advantages_left>
+      <img style=width:70%;border-radius:50px; src="/r_m_land/img/red theme/individual approach.png">
+    </div>
+    <div class=advantages_right>
+      <h3 class=advantages_title>Индивидуальный подход</h3>
+      <div class="coloredLine"></div>
+      <p class=advantages_text>
+        Мы умеем слушать наших клиентов и находим оптимальные IT-решения, учитывающие существующую IT-инфраструктуру компании и логику затрагиваемых бизнес-процессов.
+      </p>
+    </div>
+  </div>
+</div>
+<div style=margin-top:100px>
+  <div class=advantages_item>
+    <div class=advantages_left>
+      <img style=width:70%; src="/r_m_land/img/red theme/openess17.jpg">
+    </div>
+    <div class=advantages_right>
+      <h3 class=advantages_title>Открытость</h3>
+      <div class="coloredLine"></div>
+      <p class=advantages_text>
+         Нам интересно работать с разными по размеру и профилю компаниями. Мы заинтересованы в долгосрочном сотрудничестве и, соответственно, в развитии вашего бизнеса. Именно поэтому мы предлагаем вам оптимальные цены на наши услуги.
+      </p>
+    </div>
+  </div>
+</div>
+<div style=margin-top:100px>
+  <div class=advantages_item>
+    <div class=advantages_left>
+      <img style="width:70%;" src="/r_m_land/img/red theme/support_2_grey.jpg">
+    </div>
+    <div class=advantages_right>
+      <h3 class=advantages_title>Поддержка</h3>
+      <div class="coloredLine"></div>
+      <p class=advantages_text>
+         Мы гарантируем качество наших продуктов и предоставляем бесплатную техническую поддержку в течение года после начала эксплуатации готового продукта.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- technologies -->
+  <section id=technologies class=mysection>
+    <div class="container">
+      <div style=margin-bottom:20px; class="col-md-12 titleSection">
+          <h2>Наши технологии</h2>
+          <div class="coloredLine"></div>
+      </div>
+      <p style="margin:20px auto;font-size:180%;line-height:1.5;text-align:center;font-family:'HelveticaNeue-Light';">
+        Мы используем современные и стабильные инструменты для решения ваших задач
+      </p>
+      <img src="img/logo_nodejs.jpg" class="photo" alt="Node js">
+      <img src="img/logo_perl.png"   class="photo" alt="Perl">
+      <img src="img/logo_mysql.jpg"  class="photo" alt="MySQL">
+      <img src="img/logo_apache.jpg" class="photo" alt="Apache">
+      <img src="img/logo_nginx.jpg"  class="photo" alt="Nginx">
+      <img src="img/logo_js.jpg" style=border-radius:20px alt="JavaScript">
+      <img src="img/logo_htmlCss.jpg" class="photo" alt="HTML5 CSS">
+    </div>
+  </section>
+<!-- technologies -->
+
+
+  <!-- team -->
+<div id="testimonial">
+  <div class=container>
+    <div class="row mt">
+      <div class="col-lg-8 col-lg-offset-2 centered">
+        <div id=slider class="slider">
+          <ul>
+            <li>
+              <img src="/r_m_land/img/team_andrey.jpg" class="img-circle aligncenter" width="120" alt="First slide">
+              <hr class="aligncenter">
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+            </li>
+            <li>
+              <img src="/r_m_land/img/team_nina.jpg" class="img-circle aligncenter" width="120"  alt="Second slide">
+              <hr class="aligncenter">
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+            </li>
+            <li>
+              <img src="/r_m_land/img/team_anna.jpg" width="120" class="img-circle aligncenter" alt="Third slide">
+              <hr class="aligncenter">
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- team -->
+
+  <!-- contact-us -->
+<div id="contact-us" class="contact-us">
+  <div class="container">
+    <div class="contact-info">
+      <h2>А что нужно вам?</h2>
+      <p style=color:#000;font-weight:300;font-size:160%>Позвоните нам или оставьте заявку с кратким описанием задачи, мы подберем подходящего специалиста, который свяжется с вами в кратчайшие сроки.</p>
+    </div>
+    <div class="contact-grids">
+      <div class="col-md-4 contact-left">
+        <h2>Контактная информация</h2>
+        <div class="border"></div>
+        <p style=font-size:140%;line-height:1.5;color:#000>По вопросам сотрудничества, разработки корпоративных продуктов и размещения рекламы на сайте обращайтесь по указанным ниже контактным данным.</p>
+        <div style=font-size:140%;line-height:1.5;color:#000>
+          <span style='font-size:120%;'>E-mail:</span>
+          <p style='margin:5px 0 10px 0;padding:0 0 0 5%;font-size:140%;color:#000;white-space:nowrap;'>
+            info@risk-monitoring.ru
+          </p>
+          <span style='font-size:120%;'>Телефон:</span>
+          <p style='margin:5px 0 10px 0;padding:0 0 0 5%;font-size:140%;color:#000;white-space:nowrap;'>
+            +7(906)-095-92-31<br>
+            +7(926)-623-95-40
+          </p>
+        </div>
+        <div style='margin-top:30px'>
+          <h3>Адрес</h3>
+          <ul>
+            <li style=font-size:120%;font-weight:400>1931 Dawson Drive,</li>
+            <li style=font-size:120%;font-weight:400>15th Avenue,</li>
+            <li style=font-size:120%;font-weight:400>Little Rock, AR 72211</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- <p style="float:right">X</p> -->
+      <div class="col-md-8 contact-right">
+        <form action=#>
+          <p><span class=order_call_text_for_input>Телефон:</span></p>
+          <input style="color:#000;font-size:170%;background-color:#fff;border:2px solid#999;" type="text" placeholder="Введите телефон..." required>
+          <input style=margin-left:auto;margin-right:auto;font-size:170%; type="submit" value="Заказать звонок">
+        </form>
+      </div>
+
+      <div style=margin-top:20px; class="col-md-7 contact-right">
+        <form action=#>
+          <div class=form_feedback_column style="margin-right:2%">
+            <p><span class=order_call_text_for_input>Имя:</span></p>
+            <input class=form_feedback_text type="text" placeholder="Имя..." required>
+          </div>
+          <div class=form_feedback_column>
+            <p><span class=order_call_text_for_input>E-mail:</span></p>
+            <input class=form_feedback_text type="text" placeholder="E-mail..." required>
+          </div>
+          <textarea class=form_feedback_textarea placeholder="Сообщение..." required></textarea>
+          <input style=margin-left:auto;margin-right:auto;font-size:170%; type="submit" value="Написать письмо">
+        </form>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!-- contact-us -->
+
+
+  <!-- <script src="client/lib.js"></script> -->
+  <!-- <script src="client/slider.js"></script> -->
+  <script>
+    var D      = document, W = window;
+var d      = D.documentElement;
+var log    = console.log.bind(console);
+var error  = console.error.bind(console);
+
+
+
+function getByID(id)               { var el=document.getElementById(id); return (el) ? el : (console.error('ERROR: getByID not get element by id => "#'+id+'"'));}
+function getByClass(class_name)    { var el=document.getElementsByClassName(class_name); return (el[0]) ? el[0] : (console.error('ERROR: getByClass not get element by class => ".'+class_name+'"')); }
+function getByClassAll(class_name) { var els=document.getElementsByClassName(class_name); if(els&&els.length!==0) return els; else console.error('ERROR: getByClassAll not get elements by class => ".'+class_name+'"');return [];}
+function removeElement (parent_id, child_id) {
+  var parent_el = document.getElementById(parent_id) || null,
+      child_el  = document.getElementById(child_id)  || null;
+  if (!parent_el) error('ERROR: removeElement not get element by parent_id => "'+parent_id+'"');
+  if (!child_el)  error('ERROR: removeElement not get element by child_id  => "'+child_id+'"');
+  parent_el.removeChild(child_el);
+}
+
+
+// scrollTo(document.body || document.documentElement, findPos(getByID('we_do')), 600);
+// scrollTo(findPos(getByID('we_do')), 1000);
+// scrollTo('we_do', 1000);
+// to –– 'id' or getByID('id')
+function scrollTo(to, duration) {
+  to = (typeof to === 'string') ? findPos(getByID(to)) : to;
+  var body    = D.body; // For Chrome, Safari and Opera
+  var html    = d;      // Firefox and IE places the overflow at the <html> level, unless else is specified.
+  if (duration <= 0) return;
+  var difference = to - (body.scrollTop || html.scrollTop);
+  var perTick = difference / duration * 10;
+
+  setTimeout(function() {
+    html.scrollTop = body.scrollTop = (body.scrollTop || html.scrollTop) + perTick;
+    if (body.scrollTop === to || html.scrollTop === to) return;
+    scrollTo(to, duration - 10);
+  }, 10);
+}
+
+
+function smartBrowser () { return ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) ? true : false; }
+
+
+// коориднаты элемента отсительно viewport
+// для получения коориднат относительно body надо
+// добавить pageYOffset, pageXOffset
+function getObjLocation(id) {
+  var el = getByID(id), r = {};
+  if (el) {r = el.getBoundingClientRect();
+    return {left: r.left, top: r.top, right: r.right, bottom: r.bottom};
+  }
+}
+
+
+// находим верхнюю точку элемента
+// obj –– getByID('id')
+function findPos(obj) {
+  var curtop = 0;
+  if (obj.offsetParent) {
+    do {
+      curtop += obj.offsetTop;
+    } while ((obj = obj.offsetParent) !== null);
+    /* return [curtop]; for window.scroll*/
+    return curtop;
+  }
+}
+
+function objectLength (obj) {
+  var size = 0, key;
+  for (key in obj) {
+    if (obj.hasOwnProperty(key)) size++;
+  }
+  return size;
+}
+
+
+// console.log(isEmptyHash({1:2}));
+// console.log(isEmptyHash([1]));
+function isEmptyHash (hash) {
+  if (typeof hash === 'object' && !hash.length && hash.length !== 0) {
+    for (var i in hash) {
+      if (hash.hasOwnProperty(i)) return false;
+    }
+    return true;
+  } else { console.log('ERROR: isEmptyHash | hash: '+hash+' is not hash'); }
+}
+
+// console.log(isEmptyArray([]));console.log(isEmptyArray([12,23]));console.log(isEmptyArray({}));
+function isEmptyArray (array) {
+  if (typeof array !== 'object' && array.length !== 0 && !array.length) {
+    error('ERROR: isEmptyArray | array: '+array+' is not array');
+    return false;
+  }
+  if (array.length === 0) return true;
+}
+
+
+// console.log(anyElementHash({1:123, 'hello': 'vasya'}));
+function anyElementHash (obj) {
+  if (isEmptyHash(obj)) { return null; }
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) return obj[key];
+  }
+}
+
+
+/**
+ * [_R description]
+ * @param  string   –– u [url]
+ * @param  boolean  –– d [если переданы параметры {}, то POST, иначе GET]
+ * @param  function –– s [обработчик succes. Xhr передается]
+ * @param  function –– e [обработчик error]
+ * @param  digit    –– m [время задержки (5000ms default)]
+ */
+// Паттерн использования
+// _R('/', null, function(Xhr) { console.log(Xhr.responseText);},function(err) {console.log(err)});
+// function _R(u,d,s,e,m){var r=(window.XMLHttpRequest)?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP"),ue="/nss/err"/*если скрипт не лежит на сервере*/,t;if(r){r.open((d)?"POST":"GET",u,true);r.onreadystatechange=function(){if(t){/*Если запрос сработал сразу чистим таймер*/clearTimeout(t)}if(r.readyState==4){if(r.status>=200&&r.status<400){if(s){s(r)}}else{if(u!=ue){_R(ue,"e="+u)}}}};if(e){r.onerror=e;/*назначаем обработчик ошибок для самого AJAX*/m=m||5000;t=setTimeout(function(){/*Если через 5с скрипт не ответил, то обрываем соединение и вызываем функцию обработчик*/r.abort();e(m)},m)}try{r.send(d||null)}catch(z){}}};
+function _R(u, d, s, e, m) {
+  var r = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"),
+    ue = "/nss/err" /*если скрипт не лежит на сервере*/ ,
+    t;
+  if (r) {
+    r.open((d) ? "POST" : "GET", u, true);
+    if (d) r.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // для Express нужен заголовок, возможно требуется еще это charset=UTF-8 где-то
+    r.onreadystatechange = function() {
+      if (t) { /*Если запрос сработал сразу чистим таймер*/
+        clearTimeout(t);
+      }
+      if (r.readyState == 4) {
+        if (r.status >= 200 && r.status < 400) {
+          if (s) {
+            s(r);
+          }
+        } else {
+          if (u != ue) {
+            _R(ue, "e=" + u);
+          }
+        }
+      }
+    };
+    if (e) {
+      r.onerror = e; /*назначаем обработчик ошибок для самого AJAX*/
+      m = m || 5000;
+      t = setTimeout(function() { /*Если через 5с скрипт не ответил, то обрываем соединение и вызываем функцию обработчик*/
+        r.abort();
+        e(m);
+      }, m);
+    }
+    try {
+      r.send(preparePostparams(d) || null);
+      // r.send(d || null);
+    } catch (z) {}
+  }
+}
+
+
+// превращаем {} в строку вида "k=v&k2=v2" для POST параметров
+function preparePostparams (obj) {
+  if (obj === null || obj === undefined || !(obj instanceof Object)) return false;
+  var res = ''; // "k=v&k2=v2"
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      res += key+'='+obj[key]+'&';
+    }
+  }
+  return res.replace(/&$/, '');
+}
+
+    var Slider = function() {
+  this.initialize.apply(this, arguments);
+};
+Slider.prototype = {
+
+  initialize: function(slider) {
+    this.ul = slider.children[0];
+    this.li = this.ul.children;
+    // console.log('this.ul = ', this.ul);
+    // console.log('this.li = ', this.li);
+    // make <ul> as large as all <li>’s
+    this.ul.style.width = (this.li[0].clientWidth * this.li.length) + 'px';
+    this.currentIndex = 0;
+    this.goTo(1); this.goTo(0); /* это делаем для того чтобы избавиться от отсутсвия эфеекта пролистывания при переходе к первому слайду*/
+    // console.log('this.ul.style.width =', this.ul.style.width);
+  },
+
+  goTo: function(index) {
+    // filter invalid indices
+    if (index < 0 || index > this.li.length - 1) return;
+
+    // move <ul> left
+    this.ul.style.left = '-' + (100 * index) + '%';
+    // console.log(this.ul.style.left)
+    this.currentIndex = index;
+  },
+
+  goToPrev: function() {
+    this.goTo(this.currentIndex - 1);
+  },
+
+  goToNext: function() {
+    this.goTo(this.currentIndex + 1);
+  },
+  carousel: function (delay) {
+    var self = this;
+    setTimeout(function() {
+      var new_index = self.currentIndex+1;
+      var index = (new_index > (self.li.length-1)) ? 0 : new_index;
+      self.goTo(index);
+      self.carousel(delay)
+    }, delay);
+  }
+};
+    /*jshint sub: true*/
+/*jshint loopfunc: true */
+/*jshint newcap: false */
+/*jshint multistr: true */
+/*jshint expr: true */
+/*jshint esnext: true */
+
+
+// ПРИ КЛИКЕ НА ПУНКТ МЕНЮ ПЛАВНО СКРОЛЛИМ К ВЫБРАННОМУ РАЗДЕЛУ
+
+var  click_on_item_menu = (function () {
+  "use strict";
+  var exports = {};
+
+  exports.init = function() {
+    var ids = ['imenu_item_1', 'imenu_item_2', 'imenu_item_3', 'imenu_item_4', 'imenu_item_5'];
+    for (var i = 0, l = ids.length; i < l; i++) {
+      var id = ids[i];
+      getByID(id).onclick = function(e) {
+        if (smartBrowser) {
+          e.preventDefault();
+          var t = e && e.target || e.srcElement;
+          var m = getByID(t.id).href.match(/#(.+)$/);
+          if (m && m[1]) scrollTo(m[1], 1000);
+        }
+      };
+    }
+  };
+
+  return exports;
+}());
+
+
+
+    /*jshint sub: true*/
+/*jshint loopfunc: true */
+/*jshint newcap: false */
+/*jshint multistr: true */
+/*jshint expr: true */
+/*jshint esnext: true */
+
+
+// ФОРМУ ОБРАТНОЙ СВЯЗИ
+
+var form_feedback = (function () {
+  "use strict";
+  var exports = {};
+
+  var COUNT = 0;
+
+  // всталяем форму обратной связи по клику на пункт advantages
+  exports.init = function() {
+    var key = 'services_';
+    var l   = 8; // кол-во элементов
+    for (var i = 1; i <= l; i++) {
+      var id = key+i;
+      (function (loopback_id) {
+        getByID(id).onclick = function(e) {
+          var subject = getByID(loopback_id+'_title').textContent;
+          getByID('we_do').style.display = 'none';
+          if (!COUNT) {
+            getByID('servicesContent').insertAdjacentHTML('beforeBegin', form_feedback.get_html()); COUNT = 1;
+          } else {
+            getByID('servicesContent').style.display = 'block';
+          }
+          getByID('feedback_textarea').value   = subject+':';
+        };
+      }(id));
+    }
+  };
+
+
+  exports.get_html = function () {
+    var html = '';
+    // <!-- <p style="float:right">X</p> -->
+    html += '<div class="col-md-8 contact-right">';
+      html += '<form action=#>';
+        html += '<p><span class=order_call_text_for_input>Телефон:</span></p>';
+        html += '<input style="color:#000;font-size:170%;background-color:#fff;border:2px solid#999;" type="text" placeholder="Введите телефон..." required>';
+        html += '<input style=margin-left:auto;margin-right:auto;font-size:170%; type="submit" value="Заказать звонок">';
+      html += '</form>';
+    html += '</div>';
+
+    html += '<div style=margin-top:20px; class="col-md-7 contact-right">';
+      html += '<form action=#>';
+        html += '<div class=form_feedback_column style="margin-right:2%">';
+          html += '<p><span class=order_call_text_for_input>Имя:</span></p>';
+          html += '<input class=form_feedback_text type="text" placeholder="Имя..." required>';
+        html += '</div>';
+        html += '<div class=form_feedback_column>';
+          html += '<p><span class=order_call_text_for_input>E-mail:</span></p>';
+          html += '<input class=form_feedback_text type="text" placeholder="E-mail..." required>';
+        html += '</div>';
+        html += '<textarea class=form_feedback_textarea placeholder="Сообщение..." required></textarea>';
+        html += '<input style=margin-left:auto;margin-right:auto;font-size:170%; type="submit" value="Написать письмо">';
+      html += '</form>';
+    html += '</div>';
+    // html += '<div class="col-md-8 contact-right">';
+    //   html += '<form action=#>'; // /action=aj&who=order_call'
+    //     html += '<input style="color:#000;font-size:170%;background-color:#fff;border:2px solid#999;" type="text" placeholder="Введите телефон" required>';
+    //     html += '<input style=margin-left:auto;margin-right:auto;font-size:170%; type="submit" value="Заказать звонок">';
+    //   html += '</form>';
+    // html += '</div>';
+    // // <div class="col-md-6" style="margin:20px 5%;width:40%;border-top:1px solid #39C9DA"></div>*/
+    // html += '<div class="col-md-6 contact-right">';
+    //   html += '<form action=#>'; // /action=aj&who=send_mail
+    //     html += '<input style="color:#000;font-size:170%;background-color:#fff;border:2px solid#999;" type="text" placeholder="Имя..." required>';
+    //     html += '<input style="color:#000;font-size:170%;background-color:#fff;border:2px solid#999;" type="text" placeholder="E-Mail..." required>';
+    //     html += '<textarea id=feedback_textarea style="height:400px;color:#000;font-size:170%;background-color:#fff;border:2px solid#999;" class="text" placeholder="Сообщение..." required></textarea>';
+    //     html += '<input style=margin-left:auto;margin-right:auto;font-size:170%; type="submit" value="Написать письмо">';
+    //   html += '</form>';
+    // html += '</div>';
+    // html += '<div class="clearfix"></div>';
+
+    return html;
+  };
+
+  return exports;
+}());
+
+
+
+    /*jshint sub: true*/
+/*jshint loopfunc: true */
+/*jshint newcap: false */
+/*jshint multistr: true */
+/*jshint expr: true */
+/*jshint esnext: true */
+
+
+// СТАРТОВЫЙ СКРИПТ
+
+(function () {
+  "use strict";
+  var slider = new Slider(getByID('slider'));
+  slider.carousel(2000);
+  click_on_item_menu.init(); // при клике на пункт меню плавно скроллим к выбранному разделу
+  form_feedback.init();
+}());
+
+
+
+    // ${jquery.js}
+  </script>
+  <script>
+
+  </script>
+</body>
+</html>
