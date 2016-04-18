@@ -12,8 +12,11 @@
   "use strict";
   var slider = new Slider(getByID('slider'));
   slider.carousel(2000);
+
   click_on_item_menu.init(); // при клике на пункт меню плавно скроллим к выбранному разделу
+
   form_feedback.init();
+  form_feedback.set_handlers();
 }());
 
 

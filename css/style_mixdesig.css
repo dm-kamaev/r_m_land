@@ -289,8 +289,10 @@ header .btn-new{
 /*services-------------------------------------- */
 #services{
     background: #fff;
-    // padding: 150px 0px;
+    /* padding: 150px 0px;*/
     padding-top:100px;
+    cursor:pointer;
+    opacity:1;
 }
 .servicesList{
     margin: 0px;

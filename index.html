@@ -5,24 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Risk-Monitoring | Landing page</title>
+  <link href="/r_m_land/css/bundle.css" rel="stylesheet" type="text/css"/>
   <!-- <link href="/r_m_land/metro_ui-web/css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
   <!-- <link href="/r_m_land/mixdesigns/themes/mix/HTML/middle-mobile-layout/light/gray-bg/css/style_1.css" rel="stylesheet" type="text/css" media="all" /> -->
   <!-- <link href="/r_m_land/it/assets/css/style_it.css" rel="stylesheet" type="text/css" media="all" /> -->
   <!-- <link href="/r_m_land/metro_ui-web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
-  <link href="/r_m_land/css/style_ui_web.css"   rel="stylesheet" type="text/css" media="all" />
+
+  <!-- WHERE INJECTION CSS -->
+<!--   <link href="/r_m_land/css/bundle.css" rel="stylesheet" type="text/css"/> -->
+<!--   <link href="/r_m_land/css/style_ui_web.css"   rel="stylesheet" type="text/css" media="all" />
   <link href="/r_m_land/css/style_mixdesig.css" rel="stylesheet" type="text/css" media="all" />
   <link href="/r_m_land/css/style_it.css"       rel="stylesheet" type="text/css" media="all" />
   <link href="/r_m_land/css/bootstrap.css"      rel="stylesheet" type="text/css" media="all" />
   <link href="/r_m_land/css/my_style.css"       rel="stylesheet" type="text/css" media="all" />
-  <link href="/r_m_land/css/media_queries.css"  rel="stylesheet" type="text/css" media="all" />
+  <link href="/r_m_land/css/media_queries.css"  rel="stylesheet" type="text/css" media="all" /> -->
+  <!-- WHERE INJECTION CSS -->
+
 
   <!--fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
   <!--//fonts-->
 
-  <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
-  <!-- <script type="text/javascript" src="/r_m_land/metro_ui-web/js/jquery.min.js"></script> -->
-  <!-- <script src="/r_m_land/client/slider.js"></script> -->
   <style>
       @font-face {
         font-family: 'HelveticaNeue-Light';
@@ -58,11 +61,11 @@
 </head>
 <body>
 
-  <!-- banner -->
+  
 <div class="banner">
   <div>
     <div>
-      <div style="border:1px solid red;display:inline-block;width:100%;vertical-align:top;">
+      <div class=header_column>
         <span class="menu"><img src="images/icon.png" alt="" /></span>
         <div class=imenu>
           <a id=imenu_item_1 class="scroll imenu_item" href="#company">О КОМПАНИИ</a>
@@ -71,38 +74,23 @@
           <a id=imenu_item_4 class="scroll imenu_item" href="#technologies">ТЕХНОЛОГИИ</a>
           <a id=imenu_item_5 class="scroll imenu_item" href="#contact-us">КОНТАКТЫ</a>
         </div>
-        <div style="border:1px solid red;display:inline-block;width:100%;vertical-align:top;">
+        <div class=header_column>
           <a href="http://risk-monitoring.ru" class=logo_diamond_wrap>';
             <div class=logo_diamond>';
               <p class=logo_letters>R&#8198;-&#8198;M</p>';
             </div>';
           </a>
         </div>
-        <!-- script for menu -->
-        <script>
-          // $( "span.menu" ).click(function() {
-          //   $( "ul.nav1" ).slideToggle(300, function() {
-          //    // Animation complete.
-          //   });
-          // });
-        </script>
-        <!-- //script for menu -->
-      <div class="clearfix"></div>
     </div>
     </div>
-<!--     <div class="banner-info">
-      <h1>THE ULTIMATE COLLECTION OF FREE PSD TEMPLATES!!</h1>
-      <div class="download"><a href="#">DOWNLOAD</a></div>
-    </div> -->
   </div>
 </div>
 
   <!-- about-us -->
   <div id="company" class="about-us">
     <div class="container">
-      <div class="about-info">
-        <h2>ABOUT US</h2>
-        <p style=font-weight:600>Компания “Risk-monitoring” разрабатывает индивидуальные решения по автоматизации рабочих процессов.</p>
+      <div>
+        <h2 class=contact_us_intro_title>Компания “Risk-monitoring” разрабатывает индивидуальные решения по автоматизации рабочих процессов.</h2>
       </div>
       <div class="about-grids">
         <div class="col-md-6 about-left">
@@ -139,27 +127,27 @@
     </div>
     <div class="space80"></div>
 
-    <div id=servicesContent class="servicesContent" >
+    <div id=services_content class="servicesContent" >
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <!--the 4 servicesList -->
             <ul class="servicesList">
-              <li id=services_1 class="col-md-3 col-sm-6 white_blue">
+              <li id=services_content_1 class="col-md-3 col-sm-6 white_blue">
                 <span class="number">1</span>
-                <h3 id=services_1_title>Системы электронного документооборота</h3>
+                <h3 id=services_content_1_1>Системы электронного документооборота</h3>
               </li>
-              <li id=services_2 class="col-md-3 col-sm-6 pink">
+              <li id=services_content_2 class="col-md-3 col-sm-6 pink">
                 <span class="number">2</span>
-                <h3 id=services_2_title>Cистемы по сбору и обработке статистической информации</h3>
+                <h3 id=services_content_2_1>Cистемы по сбору и обработке статистической информации</h3>
               </li>
-              <li id=services_3 class="col-md-3 col-sm-6 blue">
+              <li id=services_content_3 class="col-md-3 col-sm-6 blue">
                 <span class="number">3</span>
-                <h3 id=services_3_title>Программный комплекс по анализу финансового положения клиентов банка</h3>
+                <h3 id=services_content_3_1>Программный комплекс по анализу финансового положения клиентов банка</h3>
               </li>
-              <li id=services_4 class="col-md-3 col-sm-6 orange">
+              <li id=services_content_4 class="col-md-3 col-sm-6 orange">
                 <span class="number">4</span>
-                <h3 id=services_4_title>Автоматизированные системы управления затрат компании</h3>
+                <h3 id=services_content_4_1>Автоматизированные системы управления затрат компании</h3>
               </li>
             </ul>
           </div>
@@ -169,21 +157,21 @@
           <div class="col-md-12">
             <!--the 4 servicesList -->
             <ul class="servicesList">
-              <li id=services_5 class="col-md-3 col-sm-6 green">
+              <li id=services_content_5 class="col-md-3 col-sm-6 green">
                 <span class="number">5</span>
-                <h3 id=services_5_title>Системы дистанционного обслуживания и поддержки клиентов</h3>
+                <h3 id=services_content_5_1>Системы дистанционного обслуживания и поддержки клиентов</h3>
               </li>
-              <li id=services_6 class="col-md-3 col-sm-6 purple">
+              <li id=services_content_6 class="col-md-3 col-sm-6 purple">
                 <span class="number">6</span>
-                <h3 id=services_6_title>Системы Интранет</h3>
+                <h3 id=services_content_6_1>Системы Интранет</h3>
               </li>
-              <li id=services_7 class="col-md-3 col-sm-6 yellow">
+              <li id=services_content_7 class="col-md-3 col-sm-6 yellow">
                 <span class="number">7</span>
-                <h3 id=services_7_title>Автоматизированные системы кредитного скоринга</h3>
+                <h3 id=services_content_7_1>Автоматизированные системы кредитного скоринга</h3>
               </li>
-              <li id=services_8 class="col-md-3 col-sm-6 white_red">
+              <li id=services_content_8 class="col-md-3 col-sm-6 white_red">
                 <span class="number">8</span>
-                <h3 id=services_8_title>Системы автоматизированного составления авансовых отчетов</h3>
+                <h3 id=services_content_8_1>Системы автоматизированного составления авансовых отчетов</h3>
               </li>
             </ul>
           </div>
@@ -256,7 +244,7 @@
       <h3 class=advantages_title>Индивидуальный подход</h3>
       <div class="coloredLine"></div>
       <p class=advantages_text>
-        Мы умеем слушать наших клиентов и находим оптимальные IT-решения, учитывающие существующую IT-инфраструктуру компании и логику затрагиваемых бизнес-процессов.
+        Мы умеем слушать наших клиентов и находим оптимальные IT-решения, учитывающие существующую IT-экосистему компании и логику затрагиваемых бизнес-процессов.
       </p>
     </div>
   </div>
@@ -322,19 +310,24 @@
         <div id=slider class="slider">
           <ul>
             <li>
-              <img src="/r_m_land/img/team_andrey.jpg" class="img-circle aligncenter" width="120" alt="First slide">
+              <img src="/r_m_land/img/team_andrey_head_software_development.jpg" class="img-circle aligncenter" style="border:1px solid #2f2f2f;"  alt="Алексей –– руководитель отдела разработки программного обеспечения">
               <hr class="aligncenter">
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              <p style=margin-top:50px;font-size:170%;>Алексей – руководитель отдела разработки программного обеспечения</p>
             </li>
             <li>
-              <img src="/r_m_land/img/team_nina.jpg" class="img-circle aligncenter" width="120"  alt="Second slide">
+              <img src="/r_m_land/img/team_anna_client_manager.jpg" style="border:1px solid #2f2f2f;width:120px" class="img-circle aligncenter" alt="Анна – клиенский менеджер">
               <hr class="aligncenter">
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              <p style=margin-top:50px;font-size:170%;>Анна – клиенский менеджер</p>
             </li>
             <li>
-              <img src="/r_m_land/img/team_anna.jpg" width="120" class="img-circle aligncenter" alt="Third slide">
+              <img src="/r_m_land/img/team_dmitrii_technical_director.jpg" style="border:1px solid #2f2f2f;width:210px" class="img-circle aligncenter" alt="Дмитрий – технический директор">
               <hr class="aligncenter">
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              <p style=margin-top:50px;font-size:170%;>Дмитрий – технический директор</p>
+            </li>
+            <li>
+              <img src="/r_m_land/img/team_сhristina_client_manager.jpg" class="img-circle aligncenter" style="border:1px solid #2f2f2f;width:150px;" alt="Кристина –– клиенский менджер">
+              <hr class="aligncenter">
+              <p style=margin-top:50px;font-size:170%;>Кристина – клиенский менджер</p>
             </li>
           </ul>
         </div>
@@ -347,9 +340,10 @@
   <!-- contact-us -->
 <div id="contact-us" class="contact-us">
   <div class="container">
-    <div class="contact-info">
-      <h2>А что нужно вам?</h2>
-      <p style=color:#000;font-weight:300;font-size:160%>Позвоните нам или оставьте заявку с кратким описанием задачи, мы подберем подходящего специалиста, который свяжется с вами в кратчайшие сроки.</p>
+    <!-- <div class="contact-info"> -->
+    <div class="contact_us_intro">
+      <h2 class=contact_us_intro_title>А что нужно вам?</h2>
+      <p class=contact_us_intro_text>Позвоните нам или оставьте заявку с кратким описанием задачи, мы подберем подходящего специалиста, который свяжется с вами в кратчайшие сроки.</p>
     </div>
     <div class="contact-grids">
       <div class="col-md-4 contact-left">
@@ -515,6 +509,46 @@ function anyElementHash (obj) {
 }
 
 
+// ПАТТЕРН ИСПОЛЬЗОВАНИЯ
+// fadeInOut(document.getElementById('hello'),'Out','none', 100, function() {
+//   fadeInOut(document.getElementById('hello'),'In','inline', 100);
+// });
+// fadeInOut(document.getElementById('hello'),'In','inline', 100);
+// fadeInOut(document.getElementById('hello'),'Out','none', 100);
+/**
+ * fadeInOut функция проявления и затухания
+ * @param  {[object]}   el          id элемента
+ * @param  {[string]}   way         In or Out
+ * @param  {[string]}   displayType тип свойства display
+ * @param  {[digit]}    time        время эффекта
+ */
+function fadeInOut(el, way, displayType, time, callback){
+  var info = {};
+  info.op = +el.style.opacity; // привели к числу
+  var s = (way === 'In') ? (1 / time) : -1 * (1 / time);
+  if (way === 'In') { el.style.display = displayType; } // меняем свойство с none на переданное
+
+  (function fade() {
+     el.style.opacity = info.op + s;
+     info.op = info.op + s;
+     console.log(way, info.op)
+    // End fadeIn
+    if (info.op >= 1 && way === 'In') {
+      if (callback) { callback(); }
+    }
+    // End fadeOut
+    else if (info.op <= 0 && way === 'Out') {
+      el.style.display = displayType; // как правило это none
+      el.style.opacity = '0';
+      if (callback) { callback(); }
+    }
+    else {
+      ( window.requestAnimationFrame && requestAnimationFrame(fade) ) || setTimeout(fade, 16)
+    }
+  })();
+}
+
+
 /**
  * [_R description]
  * @param  string   –– u [url]
@@ -669,34 +703,12 @@ var form_feedback = (function () {
   "use strict";
   var exports = {};
 
-  var COUNT = 0;
-
-  // всталяем форму обратной связи по клику на пункт advantages
-  exports.init = function() {
-    var key = 'services_';
-    var l   = 8; // кол-во элементов
-    for (var i = 1; i <= l; i++) {
-      var id = key+i;
-      (function (loopback_id) {
-        getByID(id).onclick = function(e) {
-          var subject = getByID(loopback_id+'_title').textContent;
-          getByID('we_do').style.display = 'none';
-          if (!COUNT) {
-            getByID('servicesContent').insertAdjacentHTML('beforeBegin', form_feedback.get_html()); COUNT = 1;
-          } else {
-            getByID('servicesContent').style.display = 'block';
-          }
-          getByID('feedback_textarea').value   = subject+':';
-        };
-      }(id));
-    }
-  };
-
-
   exports.get_html = function () {
     var html = '';
-    // <!-- <p style="float:right">X</p> -->
-    html += '<div class="col-md-8 contact-right">';
+    var style_cross = '"float:right;margin-right:10%;font-size:250%;font-weight:400;cursor:pointer;"';
+    html += '<p id=cross style='+style_cross+'>X</p>';
+    html += '<div style="float:none;margin:0 auto;" class="col-md-8 contact-right">';
+    // html += '<div class="col-md-8 contact-right">'; // для footer
       html += '<form action=#>';
         html += '<p><span class=order_call_text_for_input>Телефон:</span></p>';
         html += '<input style="color:#000;font-size:170%;background-color:#fff;border:2px solid#999;" type="text" placeholder="Введите телефон..." required>';
@@ -704,7 +716,8 @@ var form_feedback = (function () {
       html += '</form>';
     html += '</div>';
 
-    html += '<div style=margin-top:20px; class="col-md-7 contact-right">';
+    html += '<div style="float:none;margin:0 auto;margin-top:20px;" class="col-md-8 contact-right">';
+    // html += '<div style="margin-top:20px;" class="col-md-8 contact-right">'; // для footer
       html += '<form action=#>';
         html += '<div class=form_feedback_column style="margin-right:2%">';
           html += '<p><span class=order_call_text_for_input>Имя:</span></p>';
@@ -714,7 +727,7 @@ var form_feedback = (function () {
           html += '<p><span class=order_call_text_for_input>E-mail:</span></p>';
           html += '<input class=form_feedback_text type="text" placeholder="E-mail..." required>';
         html += '</div>';
-        html += '<textarea class=form_feedback_textarea placeholder="Сообщение..." required></textarea>';
+        html += '<textarea id=form_feedback_textarea class=form_feedback_textarea placeholder="Сообщение..." required></textarea>';
         html += '<input style=margin-left:auto;margin-right:auto;font-size:170%; type="submit" value="Написать письмо">';
       html += '</form>';
     html += '</div>';
@@ -734,8 +747,49 @@ var form_feedback = (function () {
     //   html += '</form>';
     // html += '</div>';
     // html += '<div class="clearfix"></div>';
-
     return html;
+  };
+
+  var proccesing_services_content = function(id) {
+    var m = id.match(/^(services_content_\d+)/);
+    if (m && m[1]) {
+      var subject = getByID(m[1]+'_1').textContent || '';
+      getByID('form_feedback_textarea').value = subject+':';
+      // opacity должен быть 1 равен
+      fadeInOut(getByID('services'),'Out','none', 50, function() {
+        fadeInOut(getByID('form_feedback_service'), 'In', 'block', 50);
+      });
+    }
+  };
+
+  // var TREE = {
+  //   services_content: {}
+  // };
+  // всталяем форму обратной связи по клику на пункт advantages
+  exports.init = function() {
+    var html = '';
+    html += '<div id=form_feedback_service style="opacity:0" class="contact-us">';
+      html += '<div class="container">';
+        html += exports.get_html();
+      html += '</div>';
+    html += '</div>';
+    getByID('services').insertAdjacentHTML('beforeBegin', html);
+    getByID('form_feedback_service').style.display = 'none';
+    getByID('cross').onclick = function() {
+      fadeInOut(getByID('form_feedback_service'),'Out','none', 50, function() {
+        fadeInOut(getByID('services'), 'In', 'block', 50);
+      });
+    };
+  };
+
+
+  exports.set_handlers = function() {
+    getByID('services_content').onclick = function(e) {
+      var t = e && e.target || e.srcElement, m;
+      console.log(t);
+      while(t && !t.id){t=t.parentNode;}
+      if (t.id) { proccesing_services_content(t.id); }
+    };
   };
 
   return exports;
@@ -757,8 +811,11 @@ var form_feedback = (function () {
   "use strict";
   var slider = new Slider(getByID('slider'));
   slider.carousel(2000);
+
   click_on_item_menu.init(); // при клике на пункт меню плавно скроллим к выбранному разделу
+
   form_feedback.init();
+  form_feedback.set_handlers();
 }());
 
 
@@ -766,7 +823,7 @@ var form_feedback = (function () {
     // ${jquery.js}
   </script>
   <script>
-
+    
   </script>
 </body>
 </html>

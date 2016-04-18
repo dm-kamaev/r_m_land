@@ -1,12 +1,18 @@
 /* MY STYLE */
-// .base_text{font-size:120%;line-height:1.5;color:#000}
+
 .photo{margin:0 1%;}
 .mysection{padding-top:100px;}
 
-/* header */
+/* HEADER */
+.header_column{
+  display:inline-block;
+  width:100%;
+  vertical-align:top;
+}
+
 .logo_diamond_wrap {
   display:inline-block;
-  margin:2% 0 0 45%;
+  margin:50px 0 0 48%;
   width:10%;
   text-decoration:none;
 }
@@ -14,9 +20,9 @@
 .logo_diamond_wrap:focus{outline:none;text-decoration:none;}
 
 .logo_diamond {
-    // background:#39c9da none repeat scroll 0 0;
-    // background:#ee651e none repeat scroll 0 0;
-    margin:25px 50% 0;
+    /* background:#39c9da none repeat scroll 0 0;
+     background:#ee651e none repeat scroll 0 0;*/
+    margin:50px 50% 0;
     width:100px;
     height:100px;
     border:3px solid #fff;
@@ -37,16 +43,19 @@
 }
 .logo_letters:focus{outline:none}
 
-.imenu{margin-left:50%;width:100%;}
+.imenu{
+  margin-left:22%;
+  width:100%;
+}
 .imenu_item{
+  width:15%;
   display:inline-block;
-  // border:1px solid yellow;
-  width:10%;
   vertical-align:top;
-  padding: 10px 1% 0 1%;
+  padding:10px 1% 0 1%;
   color:#fff;
   text-decoration:none;
   font-size:130%;
+  text-align:center;
   font-weight:700;
 }
 .imenu_item:hover{
@@ -60,25 +69,25 @@
 }
 .imenu_item:focus{color:#fff;text-decoration:none;}
 
-// .menu li{
-//   display: inline-block;
-//   padding: 10px 20px 0 0;
-// }
-// .menu a{
-//   color:#fff;
-//   text-decoration:none;
-//   font-weight:600;
-//   font-size:14px;
-// }
-// .menu a:hover{
-//   color: #39c9da;
-//   text-decoration:none;
-//   transition: .5s all;
-//   -webkit-transition: .5s all;
-//   -o-transition: .5s all;
-//   -ms-transition: .5s all;
-//   -moz-transition: .5s all;
-// }
+/*.menu li{
+  display: inline-block;
+  padding: 10px 20px 0 0;
+}
+.menu a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+}
+.menu a:hover{
+  color: #39c9da;
+  text-decoration:none;
+  transition: .5s all;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  -ms-transition: .5s all;
+  -moz-transition: .5s all;
+}*/
 .menu a:visited{
   color:#fff;
   text-decoration: none;
@@ -91,7 +100,7 @@
 }
 
 .advantages_left{
-  // border:1px solid red;
+  /*border:1px solid red;*/
   display:inline-block;
   width:35%;
   vertical-align:top;
@@ -99,7 +108,7 @@
 }
 
 .advantages_right{
-  // border:1px solid red;
+  /* border:1px solid red; */
   display:inline-block;
   width:63%;
   vertical-align:top;
@@ -122,7 +131,6 @@
 }
 
 .advantages_list_left{
-  // border:1px solid red;
   margin-top:15px;
   padding-left:5%;
   display:inline-block;
@@ -132,7 +140,6 @@
 
 
 .advantages_list_right{
-  // border:1px solid red;
   margin-top:15px;
   display:inline-block;
   width:83%;
@@ -160,6 +167,24 @@
 
 
 /* FOOTER */
+/* Я ИСПОЛЬЗУЮ ЭТОТ КЛАСС И В РАЗДЕЛЕ 'КОМПАНИЯ' */
+.contact_us_intro_title{
+  margin:0;
+  text-align:center;
+  font-size:25px;
+  font-weight:600;
+  color:#504f50;
+}
+.contact_us_intro_text{
+  margin: 18px auto 45px auto;
+  text-align:center;
+  color:#777;
+  width:46%;
+  font-weight:300;
+  font-size:160%;
+}
+
+
 .order_call_text_for_input{
   font-size:150%;line-height:1.5;
 }
