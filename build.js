@@ -9,7 +9,7 @@
 
 "use strict";
 
-// ОПИСАНИЕ СКРИПТА
+// СБОРКА LANDING PAGE
 
 var CONF     = require('/r_m_land/config.js').settings();
 var fs       = require('fs');
@@ -18,6 +18,8 @@ var wf       = require(CONF.my_modules   + 'wf.js');
 var files    = require(CONF.my_modules   + 'files.js');
 var fn       = require(CONF.my_modules   + 'fn.js');
 var template = require(CONF.my_modules   + 'template.js');
+var minify   = require(CONF.my_modules   + 'minify.js');
+
 var uglifyjs = require(CONF.node_modules + 'uglify-js');
 
 var metrica  = require(CONF.my_modules   + 'metrica.js');
@@ -31,21 +33,34 @@ CONTEXT.set('params', {});
 
 
 
-
-
+// var res = `
+//   <!-- WHERE INJECTION CSS -->
+//   <link rel="stylesheet" href="#" />
+//   <link rel="stylesheet" href="#" />
+//   <!-- WHERE INJECTION CSS -->
+//   <h1>Test</h1>
+//   `;
+// console.log(res.replace(/\s*<!-- WHERE INJECTION CSS -->[\s\S]+<!-- WHERE INJECTION CSS -->/, ''));
+// console.log(res.replace(/\s+<!-- WHERE INJECTION CSS -->[\s\S]+/, ''));
+start();
 // ---------------------------------------------------------------------------------------------------
-
-asc.series_move_data([
-  (cbm) => { build_html(CONTEXT, cbm);},
-  (cbm) => { build_css(CONTEXT, cbm);},
-  (cbm) => { build_js(CONTEXT, cbm); },
-  (cbm) => { build_all(CONTEXT, cbm); },
-  (cbm, data) => { wf.write_file(CONF.main_path+'index.html', data, cbm); },
-  ],function(err, result) {
-    console.log('\n\n async BUILD.JS series dine: ', err || result);
-    set_watch();
-});
-
+function start () {
+  asc.series_move_data([
+    (cbm) => { build_html(CONTEXT, cbm);},
+    (cbm) => { build_js(CONTEXT, cbm); },
+    (cbm) => { build_all(CONTEXT, cbm); },
+    (cbm, data) => { wf.write_file(CONF.main_path+'index.html', data, cbm); },
+    (cbm) => { build_css(CONTEXT, cbm);},
+    (cbm) => { remove_extra_css(CONF.main_path+'index.html', cbm); },
+    (cbm) => { injection_inline_css(CONTEXT, cbm); }
+    ],function(err, result) {
+      console.log('\n\n async BUILD.JS series dine: ', err || result);
+        set_watch_html();
+        set_watch_js();
+        set_watch_css();
+    });
+}
+// ---------------------------------------------------------------------------------------------------
 
 function rebuilding (type_build) {
   var do_that = [];
@@ -64,9 +79,6 @@ function rebuilding (type_build) {
       console.log('\n\n async REBUILD => BUILD.JS series dine: ', err || result);
   });
 }
-
-// ---------------------------------------------------------------------------------------------------
-
 
 function build_js (CONTEXT, cb_main) {
   files.get_list_files(CONF.path_js, function(err, res) {
@@ -140,7 +152,6 @@ function build_css (CONTEXT, cb_main) {
           // if (!err) { params[fname] = res; }
           if (!err) {
             if (!params.bundle_css) { params.bundle_css = '';}
-            params.bundle_css += from_file;
             wf.add_file(css_bundle, from_file, function(error, res) {
               // if (!error) {}
               cb(error || null, null);
@@ -167,18 +178,86 @@ function build_all (CONTEXT, cb_main) {
 
   template.do(CONTEXT.get('params'), { file: CONF.main_path+'site.html' }, function(err, res) {
     // res = res.replace(/\<style\>(.+)\<\/style\>/, '<style>$1'+params.bundle_css+'</style>');
-    // console.log(res);
     // res = res.replace(/<style>(.+)<\/style>/m, '<style>$1__TEST__.{}</style>');
     cb_main(err || null, res, 'build_all');
   });
 }
 
 
-function set_watch () {
-  set_watch_html();
-  set_watch_js();
-  set_watch_css();
+function injection_inline_css (CONTEXT, cb_main) {
+  if (CONF.min_css === 'on') {
+    wf.read_file(CONF.main_path+'index.html', function(err, res) {
+      if (!err) {
+        res = res.replace(/\s*<\!\-\- WHERE INJECTION CSS \-\->[\s\S]+<\!\-\- WHERE INJECTION CSS \-\-\>/, '');
+        res = minify.html(res);
+        res = res.replace(/<style>(.+?)<\/style>/, '<style>$1'+CONTEXT.get('bundle_css')+'</style>');
+        wf.write_file(CONF.main_path+'index.html', res, function(error, result) {
+          cb_main(error || null, 'injection_inline_css');
+        });
+      } else {
+        cb_main(err || null, 'injection_inline_css');
+      }
+    });
+  } else {
+    cb_main(null, 'OFF injection_inline_css');
+  }
 }
+
+
+function remove_extra_css (html_file, cb_main) {
+  if (CONF.min_css === 'on') {
+    remove_css_from_file(html_file, function(err, res) {
+      if (!err) {
+        res = minify.css(res);
+        CONTEXT.set('bundle_css', res);
+        wf.write_file(CONF.path_css+'bundle.css', res, function(error, result) {
+          cb_main(error || null, 'remove_extra_css');
+        });
+      } else {
+        cb_main(err, 'remove_extra_css');
+      }
+    });
+  } else {
+    cb_main(null, 'OFF remove_extra_css');
+  }
+}
+
+
+// remove_css_from_file('', function(err, res) {
+//   if (!err) {
+//     wf.write_file(CONF.path_css+'bundle.css', res, function(error, result) {
+//       console.log(error || result);
+//     });
+//   } else {
+//     console.log(err);
+//   }
+// });
+function remove_css_from_file (html_file, cb_main) {
+  // var files = ['index.html'];
+  var files = [html_file];
+  var options = {
+      // ignore       : ['#added_at_runtime', /test\-[0-9]+/],
+      media: ['(min-width: 700px) handheld and (orientation: landscape)'],
+      // media        : ['all'],
+      // csspath      : '../public/css/',
+      csspath: './css/',
+      // raw          : 'h1 { color: green }',
+      // stylesheets  : ['lib/bootstrap/dist/css/bootstrap.css', 'src/public/css/main.css'],
+      // stylesheets: ['bootstrap.css', 'my_style.css', 'style_it.css', 'style_mixdesig.css', 'style_ui_web.css'],
+      stylesheets: ['bundle.css'],
+      ignoreSheets: [/fonts.googleapis/],
+      // timeout      : 2000,
+      // htmlroot     : 'public',
+      // report       : false,
+      // uncssrc      : '.uncssrc'
+    };
+  uncss(files, options, function(error, output) {
+    // console.log('Uncss = ', error || output);
+    cb_main(error || null, output);
+    // global.process.exit();
+  });
+}
+
 
 function set_watch_html () {
   var path = CONF.path_html;
@@ -210,27 +289,3 @@ function set_watch_css () {
     }
   });
 }
-// доделать
-// function remove_extra_css (html_file, cb_main) {
-//   var files = ['test.html'],
-//     options = {
-//       // ignore       : ['#added_at_runtime', /test\-[0-9]+/],
-//       media: ['(min-width: 700px) handheld and (orientation: landscape)'],
-//       // media        : ['all'],
-//       // csspath      : '../public/css/',
-//       csspath: './css/',
-//       // raw          : 'h1 { color: green }',
-//       // stylesheets  : ['lib/bootstrap/dist/css/bootstrap.css', 'src/public/css/main.css'],
-//       stylesheets: ['bootstrap.css', 'my_style.css', 'style_it.css', 'style_mixdesig.css', 'style_ui_web.css'],
-//       ignoreSheets: [/fonts.googleapis/],
-//       // timeout      : 2000,
-//       // htmlroot     : 'public',
-//       // report       : false,
-//       // uncssrc      : '.uncssrc'
-//     };
-//   uncss(str, options, function(error, output) {
-//     console.log('Uncss = ', error || output);
-//     cb_main(err||null, output)
-//     // global.process.exit();
-//   });
-// }

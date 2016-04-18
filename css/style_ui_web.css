@@ -12,7 +12,7 @@ body{
 	}
 /*-- banner --*/
 .banner{
-	background:url("../img/Original_main.jpg") no-repeat 0px 0px;
+	background:url("./img/Original_main.jpg") no-repeat 0px 0px;
 	/*background:url("../metro_ui-web/images/banner.jpg") no-repeat 0px 0px;*/
 	/* background:url("../images/banner.jpg") no-repeat 0px 0px;*/
 	background-size:cover;

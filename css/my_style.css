@@ -93,12 +93,24 @@
   text-decoration: none;
 }
 
+/* COMPANY */
+.intro_title{
+  margin:0;
+  text-align:center;
+  font-size:25px;
+  font-weight:600;
+  color:#504f50;
+}
+
+
 .advantages_item{
   margin:0 auto;
   padding:50px 5% 50px 5%;
   background:#F4F4F4;
 }
 
+
+/* ADVANTAGES */
 .advantages_left{
   /*border:1px solid red;*/
   display:inline-block;
@@ -167,7 +179,6 @@
 
 
 /* FOOTER */
-/* Я ИСПОЛЬЗУЮ ЭТОТ КЛАСС И В РАЗДЕЛЕ 'КОМПАНИЯ' */
 .contact_us_intro_title{
   margin:0;
   text-align:center;
