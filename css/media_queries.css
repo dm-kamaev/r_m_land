@@ -3,6 +3,14 @@
   .imenu{margin-left:0}
   .imenu_item{width:100%;padding:10px 1%;border-bottom:2px solid #fff}
 
+  .pad_word{font-size:100%;}
+  /*.header_phrase{margin-top:200px;font-size:190%;display:inline-block;text-align: left;}*/
+  .header_phrase{display: none}
+
+  .company_left{width:100%;}
+  .company_right{width:100%;}
+  .company_right p{overflow:none;}
+
   .advantages_list_left{width:100%;margin-top:20px;}
   .advantages_list_right{width:100%;margin-top:20px;text-align:center}
 }

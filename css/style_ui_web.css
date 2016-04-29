@@ -12,7 +12,7 @@ body{
 	}
 /*-- banner --*/
 .banner{
-	background:url("./img/Original_main.jpg") no-repeat 0px 0px;
+	background:url("${site_image}Original_main.jpg") no-repeat 0px 0px;
 	/*background:url("../metro_ui-web/images/banner.jpg") no-repeat 0px 0px;*/
 	/* background:url("../images/banner.jpg") no-repeat 0px 0px;*/
 	background-size:cover;
@@ -503,7 +503,7 @@ span.left{
 textarea.text {
 	height: 120px;
 	}
-.contact-right input[type=submit] {
+.contact-right input[type="submit"] {
 	color: white;
 	padding: 13px 43px;
 	font-size: 16px;
@@ -515,7 +515,7 @@ textarea.text {
 	border-radius: 4px;
 	border: none;
 	}
-.contact-right input[type=submit]:hover {
+.contact-right input[type="submit"]:hover {
 	background: #4b4a4b;
 	color:#ffffff;
 	transition: .5s all;
@@ -583,7 +583,8 @@ textarea.text {
 @media(max-width:1280px){
 	.banner {
 		/* background: url("../images/banner.jpg") no-repeat -55px 0px;*/
-		background: url("/r_m_land/metro_ui-web/images/banner.jpg") no-repeat -55px 0px;
+		/* background: url("/r_m_land/metro_ui-web/images/banner.jpg") no-repeat -55px 0px;*/
+		background:url("${site_image}Original_main.jpg") no-repeat -55px 0px;
 	}
 	.banner-info {
 		left: 18%;
@@ -592,7 +593,7 @@ textarea.text {
 @media(max-width:1024px){
 	.banner {
 		/* background: url("../images/banner.jpg") no-repeat -170px 0px;*/
-		background: url("/r_m_land/metro_ui-web/images/banner.jpg") no-repeat -170px 0px;
+		background: url("${site_image}Original_main.jpg") no-repeat -170px 0px;
 		min-height:525px;
 		}
 	.banner-info {
@@ -630,7 +631,7 @@ textarea.text {
 	.contact-right input[type="text"] {
 		margin: 0 15px 30px 0;
 		}
-	.contact-right input[type=submit] {
+	.contact-right input[type="submit"] {
 		margin-left: 17em;
 		}
 	.about-info p {
@@ -694,7 +695,8 @@ textarea.text {
 
 	.banner {
 		/* background: url("../images/banner.jpg") no-repeat -292px 0px;*/
-		background: url("/r_m_land/metro_ui-web/images/banner.jpg") no-repeat -292px 0px;
+		/*background: url("/r_m_land/metro_ui-web/images/banner.jpg") no-repeat -292px 0px;*/
+		background: url("${site_image}Original_main.jpg") no-repeat -292px 0px;
 		}
 	.banner-info {
 		left: 0%;
@@ -766,7 +768,7 @@ textarea.text {
 	.contact-right textarea {
 		width: 95%;
 		}
-	.contact-right input[type=submit] {
+	.contact-right input[type="submit"] {
 		margin-left: 32em;
 		}
 }
@@ -779,7 +781,9 @@ textarea.text {
 		}
 	.banner {
 		/* background: url("../images/banner.jpg") no-repeat -352px 0px; */
-		background: url("/r_m_land/metro_ui-web/images/banner.jpg") no-repeat -352px 0px;
+		/*background: url("/r_m_land/metro_ui-web/images/banner.jpg") no-repeat -352px 0px;*/
+		background: url("${site_image}Original_main.jpg") no-repeat -352px 0px;
+
 		}
 	.banner-info h1 {
 		font-size: 25px;
@@ -873,7 +877,7 @@ textarea.text {
 	.contact-left h3 {
 		font-size: 20px;
 		}
-	.contact-right input[type=submit] {
+	.contact-right input[type="submit"] {
 		padding: 12px 22px;
 		font-size: 13px;
 		margin-left: 34em;
@@ -894,7 +898,8 @@ textarea.text {
 		}
 	.banner {
 		/* background: url("../images/banner.jpg") no-repeat -441px 0px; */
-		background: url("/r_m_land/metro_ui-web/images/banner.jpg") no-repeat -441px 0px;
+		/*background: url("/r_m_land/metro_ui-web/images/banner.jpg") no-repeat -441px 0px;*/
+		background: url("${site_image}Original_main.jpg") no-repeat -441px 0px;
 		min-height: 445px;
 		}
 	.banner-info {
@@ -1025,7 +1030,7 @@ textarea.text {
 	.contact-right textarea {
 		width: 100%;
 		}
-	.contact-right input[type=submit] {
+	.contact-right input[type="submit"] {
 		margin-left: 24.7em;
 		padding: 12px 15px;
 		}
@@ -1052,7 +1057,8 @@ textarea.text {
 		}
 	.banner {
 		/* background: url("../images/banner.jpg") no-repeat -517px 0px;*/
-		background: url("/r_m_land/metro_ui-web/images/banner.jpg") no-repeat -517px 0px;
+		/*background: url("/r_m_land/metro_ui-web/images/banner.jpg") no-repeat -517px 0px;*/
+		background: url("${site_image}Original_main.jpg") no-repeat -517px 0px;
 		min-height: 292px;
 		}
 	.banner-info {
@@ -1144,7 +1150,7 @@ textarea.text {
 	.contact-left h3 {
 		padding-top:15px;
 		}
-	.contact-right input[type=submit] {
+	.contact-right input[type="submit"] {
 		margin-left: 12.4em;
 		padding: 10px 15px;
 		}
