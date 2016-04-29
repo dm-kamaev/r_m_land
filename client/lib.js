@@ -125,7 +125,6 @@ function fadeInOut(el, way, displayType, time, callback){
   (function fade() {
      el.style.opacity = info.op + s;
      info.op = info.op + s;
-     console.log(way, info.op)
     // End fadeIn
     if (info.op >= 1 && way === 'In') {
       if (callback) { callback(); }

@@ -15,8 +15,13 @@
 
   click_on_item_menu.init(); // при клике на пункт меню плавно скроллим к выбранному разделу
 
-  form_feedback.init();
-  form_feedback.set_handlers();
+  form_feedback.render_advantages();
+  form_feedback.set_handlers_advantages();
+
+  form_feedback.render_footer();
+  form_feedback.set_handlers_footer();
+
+  insert_contact_data.init();
 }());
 
 
