@@ -258,7 +258,7 @@ span.left{
 		color: #ffffff;
 		border: 1px solid #ffffff;
 		padding: 14px 33px;
-		font-size: 700;
+		font-size: 700px;
 		font-size: 16px;
 		font-weight: 700;
 	}
@@ -482,7 +482,7 @@ span.left{
 	font-size:14px;
 	line-height:1.8em;
 	}
-.contact-right input[type="text"]{
+/*.contact-right input[type="text"]{
 	width:46%;
 	color:#c9c9c9;
 	margin:0 19px 30px 0;
@@ -499,11 +499,11 @@ span.left{
 	margin-bottom:25px;
 	outline:none;
 	border:1px solid #e8e8e8;
-	}
+	}*/
 textarea.text {
 	height: 120px;
 	}
-.contact-right input[type="submit"] {
+/*.contact-right input[type="submit"] {
 	color: white;
 	padding: 13px 43px;
 	font-size: 16px;
@@ -523,7 +523,7 @@ textarea.text {
 	-o-transition: .5s all;
 	-ms-transition: .5s all;
 	-moz-transition: .5s all;
-	}
+	}*/
 /*-- footer --*/
 .footer{
 	background:#39c9da;
@@ -628,12 +628,12 @@ textarea.text {
 	.border {
 		width: 26%;
 		}
-	.contact-right input[type="text"] {
+/*	.contact-right input[type="text"] {
 		margin: 0 15px 30px 0;
 		}
 	.contact-right input[type="submit"] {
 		margin-left: 17em;
-		}
+		}*/
 	.about-info p {
 		margin: 18px auto 28px auto;
 		}
@@ -762,7 +762,7 @@ textarea.text {
 	.contact-info p {
 		width: 52%;
 		}
-	.contact-right input[type="text"] {
+	/*.contact-right input[type="text"] {
 		margin: 28px 15px 30px 0;
 		}
 	.contact-right textarea {
@@ -770,7 +770,7 @@ textarea.text {
 		}
 	.contact-right input[type="submit"] {
 		margin-left: 32em;
-		}
+		}*/
 }
 @media (max-width: 640px){
 	.logo{
@@ -877,11 +877,11 @@ textarea.text {
 	.contact-left h3 {
 		font-size: 20px;
 		}
-	.contact-right input[type="submit"] {
+	/*.contact-right input[type="submit"] {
 		padding: 12px 22px;
 		font-size: 13px;
 		margin-left: 34em;
-		}
+		}*/
 
 }
 @media (max-width: 480px){
@@ -1023,7 +1023,7 @@ textarea.text {
 	.contact-left ul {
 		padding-bottom: 18px;
 		}
-	.contact-right input[type="text"] {
+	/*.contact-right input[type="text"] {
 		margin: 0px 0px 26px 0;
 		width: 100%;
 		}
@@ -1033,7 +1033,7 @@ textarea.text {
 	.contact-right input[type="submit"] {
 		margin-left: 24.7em;
 		padding: 12px 15px;
-		}
+		}*/
 	.contact-left h2 {
 		font-size: 18px;
 		}
@@ -1150,8 +1150,8 @@ textarea.text {
 	.contact-left h3 {
 		padding-top:15px;
 		}
-	.contact-right input[type="submit"] {
+	/*.contact-right input[type="submit"] {
 		margin-left: 12.4em;
 		padding: 10px 15px;
-		}
+		}*/
 }

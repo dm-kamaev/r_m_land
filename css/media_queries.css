@@ -13,6 +13,7 @@
 
   .advantages_list_left{width:100%;margin-top:20px;}
   .advantages_list_right{width:100%;margin-top:20px;text-align:center}
+
 }
 
 /* Правка для экранов меньше 640px*/
@@ -21,4 +22,8 @@
   .advantages_right{width:100%;}
 
   .contact_us_intro_text{text-align:justify;}
+
+  .form_feedback_column{width:100%;}
+  .form_feedback_column_inputText_orderCall{width:100%;}
+
 }
