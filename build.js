@@ -13,13 +13,13 @@
 
 var CONF     = require('/r_m_land/config.js').settings();
 var fs       = require('fs');
-var asc      = require(CONF.my_modules   + 'asc.js');
-var wf       = require(CONF.my_modules   + 'wf.js');
-var files    = require(CONF.my_modules   + 'files.js');
-var fn       = require(CONF.my_modules   + 'fn.js');
-var template = require(CONF.my_modules   + 'template.js');
-var minify   = require(CONF.my_modules   + 'minify.js');
-var child    = require(CONF.my_modules   + 'child.js');
+var asc      = require(CONF.my_modules + 'asc.js');
+var wf       = require(CONF.my_modules + 'wf.js');
+var files    = require(CONF.my_modules + 'files.js');
+var fn       = require(CONF.my_modules + 'fn.js');
+var template = require(CONF.my_modules + 'template.js');
+var minify   = require(CONF.my_modules + 'minify.js');
+var child    = require(CONF.my_modules + 'child.js');
 
 var uglifyjs = require(CONF.node_modules + 'uglify-js');
 
@@ -68,6 +68,7 @@ function rebuilding (type_build) {
   if (type_build === 'css') {
     do_that.push((cbm) => { build_css(CONTEXT, cbm);});
     do_that.push((cbm) => { child.simple_call('cp /r_m_land/index.html /r_m/stat/land/land.html', cbm); });
+    do_that.push((cbm) => { child.simple_call('cp /r_m_land/css/bundle.css /r_m/stat/land/bundle.css', cbm); });
   }
   if (type_build === 'js') {
     do_that.push((cbm) => { build_js(CONTEXT, cbm); });
@@ -240,7 +241,8 @@ function remove_css_from_file (html_file, cb_main) {
       stylesheets : ['bundle.css'],
       // ignore      : ['.contact-right input[type="text"]',],
       // ignore      : [/\.contact-right.+/, /\.contact-info.+/, '.form_feedback_column'],
-      ignore      : ['.contact_us_info', '.contact-left ul', '.contact-right input[type="text"]', '.contact-right textarea', '.contact-right input[type="submit"]', '.form_feedback_column'],
+      // ignore      : ['.contact_us_info', '.contact-left ul', '.contact-right input[type="text"]', '.contact-right textarea', '.contact-right input[type="submit"]', '.form_feedback_column'],
+      ignore      : ['.col-md-7', '.col-md-8', '.form_feedback_column_input', '.form_feedback_column_inputSubmit', '.form_feedback_column_inputSubmit:hover', '.form_feedback_column_inputText_orderCall', '.form_feedback_column_inputText_sendEmail', '.form_feedback_column p', '.form_feedback_textarea', '.form_feedback_text', '.order_call_text_for_input', '.contact_us_info', '.contact-left ul', '.contact-right input[type="text"]', '.contact-right textarea', '.contact-right input[type="submit"]', '.form_feedback_column'],
       ignoreSheets: [/fonts.googleapis/],
       // timeout      : 2000,
       // htmlroot     : 'public',
