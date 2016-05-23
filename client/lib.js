@@ -1,7 +1,15 @@
-var D      = document, W = window;
-var d      = D.documentElement;
-var log    = console.log.bind(console);
-var error  = console.error.bind(console);
+/*jshint sub: true*/
+/*jshint loopfunc: true */
+/*jshint newcap: false */
+/*jshint multistr: true */
+/*jshint expr: true */
+/*jshint esnext: true */
+
+var D     = document, W = window;
+var H     = D.getElementsByTagName("head")[0];
+var d     = D.documentElement;
+var log   = console.log.bind(console);
+var error = console.error.bind(console);
 
 
 
@@ -21,7 +29,7 @@ function removeElement (parent_id, child_id) {
 // scrollTo(findPos(getByID('we_do')), 1000);
 // scrollTo('we_do', 1000);
 // to –– 'id' or getByID('id')
-function scrollTo(to, duration) {
+function scrollTo (to, duration) {
   to = (typeof to === 'string') ? findPos(getByID(to)) : to;
   var body    = D.body; // For Chrome, Safari and Opera
   var html    = d;      // Firefox and IE places the overflow at the <html> level, unless else is specified.
@@ -136,7 +144,7 @@ function fadeInOut(el, way, displayType, time, callback){
       if (callback) { callback(); }
     }
     else {
-      ( window.requestAnimationFrame && requestAnimationFrame(fade) ) || setTimeout(fade, 16)
+      ( window.requestAnimationFrame && requestAnimationFrame(fade) ) || setTimeout(fade, 16);
     }
   })();
 }
@@ -203,3 +211,9 @@ function preparePostparams (obj) {
   }
   return res.replace(/&$/, '');
 }
+
+function addCss(s){if(s){H.appendChild(crEl("style",[],s));}}
+
+function crEl(t,a,s,e){e=D.createElement(t);setArray(a,function(i,v){e[v[0]]=v[1];});if(s){e.appendChild(D.createTextNode(s));}return e;}
+
+function setArray(a,f){for(var i=0,l=a.length;i<l;i++){if(a[i]!==undefined){f(i,a[i]);}}}

@@ -10,16 +10,16 @@
 
 (function () {
   "use strict";
-  var slider = new Slider(getByID('slider'));
-  slider.carousel(2000);
+  var slider = new Slider(getByID('slider')).carousel(2000);
 
-  click_on_item_menu.init(); // при клике на пункт меню плавно скроллим к выбранному разделу
+  // при клике на пункт меню плавно скроллим к выбранному разделу
+  click_on_item_menu.init();
 
-  form_feedback.render_advantages();
-  form_feedback.set_handlers_advantages();
+  form_feedback_advantages.render();
+  form_feedback_advantages.set_handlers();
 
-  form_feedback.render_footer();
-  form_feedback.set_handlers_footer();
+  form_feedback_footer.render();
+  form_feedback_footer.set_handlers();
 
   insert_contact_data.init();
 }());
