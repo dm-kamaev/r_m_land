@@ -11,6 +11,13 @@
 
 // СБОРКА LANDING PAGE
 
+// TODO: Сжать фотки
+// TODO: Разобраться с вылезающим объектами при ширине экрана 481 media queries
+// проблема в блоках advantages, team and contact_us
+// TODO: Скачивать cron every 2 часа api для всех метрик, кэшировать их, но при этом
+// в url ../../metric.js/?${random_str}, чтобы для клиента выбивать кэш
+// TODO: Переименовать папку и название страницы на более SEO варинт
+
 var CONF     = require('/r_m_land/config.js').settings();
 var fs       = require('fs');
 var asc      = require(CONF.my_modules + 'asc.js');
