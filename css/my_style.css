@@ -190,7 +190,9 @@
   border-radius:30px;
 }
 
-
+/* TEAM */
+.team_description_person{margin-top:50px;font-size:170%!important;}
+/* TEAM */
 
 /* FOOTER */
 .contact_us_intro_title{
@@ -287,30 +289,3 @@
   transition-duration:0.5s;
   transition-property:all;
 }
-
-/* END CSS STEAL */
-
-/*button, input, optgroup, select, textarea {
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  font-style: inherit;
-  font-variant: inherit;
-  font-weight: inherit;
-  font-stretch: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  font-family: inherit;
-  color: inherit;
-}
-input, button, select, textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-*/
