@@ -16,12 +16,26 @@ var error = console.error.bind(console);
 function getByID(id)               { var el=document.getElementById(id); return (el) ? el : (console.error('ERROR: getByID not get element by id => "#'+id+'"'));}
 function getByClass(class_name)    { var el=document.getElementsByClassName(class_name); return (el[0]) ? el[0] : (console.error('ERROR: getByClass not get element by class => ".'+class_name+'"')); }
 function getByClassAll(class_name) { var els=document.getElementsByClassName(class_name); if(els&&els.length!==0) return els; else console.error('ERROR: getByClassAll not get elements by class => ".'+class_name+'"');return [];}
-function removeElement (parent_id, child_id) {
-  var parent_el = document.getElementById(parent_id) || null,
-      child_el  = document.getElementById(child_id)  || null;
+/*function removeElement (parent_id, child_id) {
+  var parent_el = getByID(parent_id) || null,
+      child_el  = getByID(child_id)  || null;
   if (!parent_el) error('ERROR: removeElement not get element by parent_id => "'+parent_id+'"');
   if (!child_el)  error('ERROR: removeElement not get element by child_id  => "'+child_id+'"');
   parent_el.removeChild(child_el);
+}*/
+
+
+/**
+ *  Пример вызова drawBorders(0);
+ * [drawBorders –– Функция рисует бордеры рандомного цвета вокруг элементов]
+ * \@param  {[type–– digit]} trigger [Если trigger === 1, то рисуем бордеры]
+ */
+function drawBorders (trigger) {
+  if (trigger === 1) {
+    [].forEach.call(document.querySelectorAll("*"), function(a) {
+      a.style.outline = "2px solid #" + (~~(Math.random() * (1 << 24))).toString(16);
+    });
+  }
 }
 
 

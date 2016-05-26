@@ -40,7 +40,8 @@ var form_feedback_footer = (function () {
         events: go_to_form,
       },
   };
-  console.log(TREE);
+
+
   function html_order_call () {
     var html = '';
     html += '<div id='+TREE.formFeedback_orderCall.id+' class="col-md-8 contact-right">';
