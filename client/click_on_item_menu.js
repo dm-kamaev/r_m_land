@@ -21,7 +21,7 @@ var  click_on_item_menu = (function () {
           e.preventDefault();
           var t = e && e.target || e.srcElement;
           var m = getByID(t.id).href.match(/#(.+)$/);
-          if (m && m[1]) { scrollTo(m[1], 1000); }
+          if (m && m[1]) { scrollTo(m[1], 500); }
         }
       };
     }
