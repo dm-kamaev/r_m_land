@@ -38,7 +38,7 @@ var html_advantages = require(CONF.oft_modules  + 'html_advantages.js');
 
 var CONTEXT = require('/r_m_land/my/context.js').add_set_get({});
 CONTEXT.set('params', {});
-// console.log(child_process.spawnSync.spawn('ls -alh',['/r_m/stat/land/land.html']).toString());
+var LAND_NAME = 'автоматизация_бизнеса.html';
 
 start();
 // ---------------------------------------------------------------------------------------------------
@@ -48,14 +48,14 @@ function start () {
     (cbm) => { build_js(CONTEXT, cbm); },
     (cbm) => { build_all(CONTEXT, cbm); },
     (cbm, data) => { wf.write_file(CONF.main_path+'index.html', CONTEXT.get('build_all'), cbm); },
-    (cbm) => { child.simple_call('cp /r_m_land/index.html /r_m/stat/land/land.html', cbm);  },
+    (cbm) => { child.simple_call('cp /r_m_land/index.html /r_m/stat/land/'+LAND_NAME, cbm);  },
     (cbm) => { build_css(CONTEXT, cbm);},
     (cbm) => { child.simple_call('cp /r_m_land/css/bundle.css /r_m/stat/land/bundle.css', cbm); }
   ];
   if (CONF.min_css === 'on') {
     do_it.push((cbm) => { remove_extra_css(CONF.main_path+'index.html', cbm); });
     do_it.push((cbm) => { injection_inline_css(CONTEXT, cbm); });
-    do_it.push((cbm) => { child.simple_call('cp /r_m_land/index.html /r_m/stat/land/land.html', cbm); });
+    do_it.push((cbm) => { child.simple_call('cp /r_m_land/index.html /r_m/stat/land/'+LAND_NAME, cbm); });
   }
 
   asc.series_move_data(do_it, function(err, result) {
@@ -74,7 +74,7 @@ function rebuilding (type_build) {
   }
   if (type_build === 'css') {
     do_that.push((cbm) => { build_css(CONTEXT, cbm);});
-    do_that.push((cbm) => { child.simple_call('cp /r_m_land/index.html /r_m/stat/land/land.html', cbm); });
+    do_that.push((cbm) => { child.simple_call('cp /r_m_land/index.html /r_m/stat/land/'+LAND_NAME, cbm); });
     do_that.push((cbm) => { child.simple_call('cp /r_m_land/css/bundle.css /r_m/stat/land/bundle.css', cbm); });
   }
   if (type_build === 'js') {
@@ -82,7 +82,7 @@ function rebuilding (type_build) {
   }
   do_that.push((cbm) => { build_all(CONTEXT, cbm); });
   do_that.push((cbm) => { wf.write_file(CONF.main_path+'index.html', CONTEXT.get('build_all'), cbm); });
-  do_that.push((cbm) => { child.simple_call('cp /r_m_land/index.html /r_m/stat/land/land.html', cbm); });
+  do_that.push((cbm) => { child.simple_call('cp /r_m_land/index.html /r_m/stat/land/'+LAND_NAME, cbm); });
 
   asc.series(do_that, function(err, result) {
       console.log('\n\n async REBUILD => BUILD.JS series dine: ', err || result);
